@@ -5,6 +5,12 @@
 
 using namespace std;
 
+//display 2D coordinates
+std::ostream& operator<<(std::ostream& os, const index& ind)
+{
+    return os << ind.i << "," << ind.j;
+}
+
 myChar::myChar(const char c_)
 {
 	if(!validChar(c_)) throw IllegalCharException(c_);
