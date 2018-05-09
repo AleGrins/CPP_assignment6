@@ -10,11 +10,7 @@ struct index //used to receive 2D coordinates for the [] overload
 	int i, j;
 };
 	
-//display 2D coordinates
-std::ostream& operator<<(std::ostream& os, const index& ind)
-{
-    return os << ind.i << "," << ind.j;
-}
+
 
 //coordinates out of bounds, returns given coordinates
 class IllegalCoordinateException : public std::exception {
