@@ -9,8 +9,6 @@ struct index //used to receive 2D coordinates for the [] overload
 {
 	int i, j;
 };
-	
-
 
 //coordinates out of bounds, returns given coordinates
 class IllegalCoordinateException : public std::exception {
