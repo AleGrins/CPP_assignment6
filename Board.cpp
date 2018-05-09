@@ -10,7 +10,10 @@ myChar::myChar(const char c_)
 	if(!validChar(c_)) throw IllegalCharException(c_);
 	c = c_;
 }
-		
+
+bool myChar::operator== (const myChar& other) { return (c == other.c); }		
+bool myChar::operator== (char c_) { return (c == c_); }
+
 bool myChar::validChar(char c) //check that given char is legal
 {
 	if(c == '.' || c == 'X' || c == 'O') return true;
