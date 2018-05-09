@@ -26,7 +26,6 @@ bool myChar::validChar(char c) //check that given char is legal
 	return false;
 }
 
-
 //constructor
 Board::Board(const int N)   
 {
