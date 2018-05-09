@@ -41,8 +41,8 @@ class myChar {
 	public:
 		myChar(const char c_);
 		
-		bool operator== (const myChar& other);		
-		bool operator== (char c_);
+		bool operator== (const myChar& other) const;		
+		bool operator== (char c_) const;
 		
 		friend ostream& operator<< (ostream& output, const myChar& ch)
 		{ 
