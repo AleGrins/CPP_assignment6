@@ -11,8 +11,8 @@ myChar::myChar(const char c_)
 	c = c_;
 }
 
-bool myChar::operator== (const myChar& other) { return (c == other.c); }		
-bool myChar::operator== (char c_) { return (c == c_); }
+bool myChar::operator== (const myChar& other) const { return (c == other.c); }		
+bool myChar::operator== (char c_) const { return (c == c_); }
 
 bool myChar::validChar(char c) //check that given char is legal
 {
