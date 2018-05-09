@@ -10,6 +10,9 @@ int main() {
 	myChar c ('X');
 	cout << c << endl;
 	
+	bool b = c=='A';
+	cout << b << endl;
+	
 	Board board1{4};
 	cout << board1 << endl;
 	
@@ -21,6 +24,9 @@ int main() {
 	
 	board1 = 'X';
 	cout << board1 << endl;
+	
+	b = board1[{1,1}] == 'X';
+	cout << b << endl;
 	
 	Board board3{3};
 	board3[{1,1}]='O';
