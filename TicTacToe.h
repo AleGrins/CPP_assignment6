@@ -5,7 +5,7 @@
 
 class TicTacToe {
 private:
-    Player* winner;
+    Player* theWinner;
     Board gameBoard;
     
 
