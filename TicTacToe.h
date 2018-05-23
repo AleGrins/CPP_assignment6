@@ -14,5 +14,5 @@ public:
 	void play(const Player Px, const Player Po);
 	Board board() const;
 	Player winner() const;
-	bool checkVictory(const myChar c);
+	bool checkVictory(const gameChar c);
 };
