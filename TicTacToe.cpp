@@ -71,11 +71,11 @@ bool TicTacToe::checkVictory(const gameChar c)
     for(int i=0; i<gameBoard.size(); i++){
         //Going over first column
         //If found an instance of char c, check if it's part of a full row or diagonal
-        if(gameBoard[{i,0}] == c){
+        if(gameBoard[{uint (i),0}] == c){
             
             if(i == 0){ //Check main diagonal
                for(int j=1; j<gameBoard.size() && victory; j++){
-                   if(gameBoard[{j,j}] != c) victory = false;
+                   if(gameBoard[{uint (j),uint (j)}] != c) victory = false;
                }
                if(victory) return true;
             }
@@ -83,7 +83,7 @@ bool TicTacToe::checkVictory(const gameChar c)
             if(i == gameBoard.size() - 1){ //Check other diagonal
                victory = true;
                for(int j=i, k=0; k<gameBoard.size() && victory; j--, k++){
-                   if(gameBoard[{j,k}] != c) victory = false;
+                   if(gameBoard[{uint (j),uint (k)}] != c) victory = false;
                }
                if(victory) return true;
             }
@@ -91,16 +91,16 @@ bool TicTacToe::checkVictory(const gameChar c)
             //Check potential row
             victory = true;
             for(int j=1; j<gameBoard.size() && victory; j++){
-                if(gameBoard[{i,j}] != c) victory = false;
+                if(gameBoard[{uint (i),uint (j)}] != c) victory = false;
             }
             if(victory) return true;
         }
     }
     for(int j=0; j<gameBoard.size(); j++){
-        if(gameBoard[{0,j}] == c){
+        if(gameBoard[{0,uint (j)}] == c){
             victory = true;
             for(int i=1; i<gameBoard.size() && victory; i++){
-                if(gameBoard[{i,j}] != c) victory = false;
+                if(gameBoard[{uint (i),uint (j)}] != c) victory = false;
             }
             if(victory) return true;
         }
