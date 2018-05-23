@@ -67,6 +67,7 @@ public:
 
 	//access board member indicated by 2D coordinate ind
 	gameChar& operator[](Coordinate ind);
+	gameChar operator[] const(Coordinate ind);
 	
 	int size() const;
 	
