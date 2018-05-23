@@ -87,7 +87,7 @@ private:
 	vector<vector<gameChar> >board; 
 	int boardSize;
 	
-	bool inBounds(Coordinate ind); //check that coordinates are not outside the board
+	bool inBounds(Coordinate ind) const; //check that coordinates are not outside the board
 };
 
 
