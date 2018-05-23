@@ -19,7 +19,7 @@ gameChar::gameChar(const char c_)
 	c = c_;
 }
 
-gameChar& gameChar::operator= (const gameChar& other) const { c = other.c; }
+gameChar& gameChar::operator= (const gameChar& other) { c = other.c; }
 
 bool gameChar::operator== (const gameChar& other) const { return (c == other.c); }		
 bool gameChar::operator== (char c_) const { return (c == c_); }
