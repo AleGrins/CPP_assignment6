@@ -11,20 +11,20 @@ std::ostream& operator<<(std::ostream& os, const Coordinate& ind)
     return os << ind.i << "," << ind.j;
 }
 
-myChar::myChar() { c = '.'; }
+gameChar::gameChar() { c = '.'; }
 
-myChar::myChar(const char c_)
+gameChar::gameChar(const char c_)
 {
 	if(!validChar(c_)) throw IllegalCharException(c_);
 	c = c_;
 }
 
-bool myChar::operator== (const myChar& other) const { return (c == other.c); }		
-bool myChar::operator== (char c_) const { return (c == c_); }
-bool myChar::operator!= (const myChar& other) const { return (c != other.c); }		
-bool myChar::operator!= (char c_) const { return (c != c_); }
+bool gameChar::operator== (const gameChar& other) const { return (c == other.c); }		
+bool gameChar::operator== (char c_) const { return (c == c_); }
+bool gameChar::operator!= (const gameChar& other) const { return (c != other.c); }		
+bool gameChar::operator!= (char c_) const { return (c != c_); }
 		
-bool myChar::validChar(char c) //check that given char is legal
+bool gameChar::validChar(char c) //check that given char is legal
 {
 	if(c == '.' || c == 'X' || c == 'O') return true;
 	return false;
@@ -35,8 +35,8 @@ Board::Board(const int N)
 {
     boardSize = N;
     for(int i=0; i<N; i++){
-    	myChar c = '.';
-    	vector<myChar> temp;
+    	gameChar c = '.';
+    	vector<gameChar> temp;
     	for(int j=0; j<N; j++){
     		temp.push_back(c);
     	}
@@ -49,8 +49,8 @@ Board::Board()
 {
     boardSize = 3;
     for(int i=0; i<3; i++){
-    	myChar c = '.';
-    	vector<myChar> temp;
+    	gameChar c = '.';
+    	vector<gameChar> temp;
     	for(int j=0; j<3; j++){
     		temp.push_back(c);
     	}
@@ -70,7 +70,7 @@ Board& Board::operator= (const Board& other)
 //assignment from a char, fills entire board with provided char
 Board& Board::operator= (char c)
 {
-	myChar tmp(c);
+	gameChar tmp(c);
     for(int i=0; i<boardSize; i++){
     	for(int j=0; j<boardSize; j++){
     		board[i][j] = tmp;
@@ -80,7 +80,7 @@ Board& Board::operator= (char c)
 }
 
 //access board member indicated by 2D coordinate ind
-myChar& Board::operator[](Coordinate ind) 
+gameChar& Board::operator[](Coordinate ind) 
 { 
 	if(!inBounds(ind)) throw IllegalCoordinateException(ind);
 	return board[ind.i][ind.j]; 
