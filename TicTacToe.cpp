@@ -12,7 +12,7 @@ void TicTacToe::play(const Player Px, const Player Po)
 {
     Px.setChar('X');
     Po.setChar('O');
-    winner = &Px;
+    theWinner = &Px;
     int moves = 0, maxMoves = gameBoard.size() * gameBoard.size();
     Coordinate coord{0,0};
     while(moves <= maxMoves){
@@ -20,12 +20,12 @@ void TicTacToe::play(const Player Px, const Player Po)
         //First player makes a move
         try { coord = Px.play(gameBoard); }
         catch (...){
-            winner = &Po;
+            theWinner = &Po;
             break; 
         }
         //Check for illegal moves
         if(gameBoard[coord] != '.'){
-            winner = &Po;
+            theWinner = &Po;
             break;
         }
         gameBoard[coord] = Px.getChar();
@@ -43,13 +43,13 @@ void TicTacToe::play(const Player Px, const Player Po)
         moves++;
         if(moves >= (gameBoard.size()*2)-1){ //Minimum number of moves for possible victory
             if(checkVictory(Po.getChar())){ //Stop if O wins
-                winner = &Po;
+                theWinner = &Po;
                 break;
             } 
         }
         
         if(moves == maxMoves){
-            winner = &Po;
+            theWinner = &Po;
             break;
         } 
     }
@@ -62,7 +62,7 @@ Board TicTacToe::board() const
 
 Player TicTacToe::winner() const
 {
-    return *winner;
+    return *theWinner;
 }
 
 bool TicTacToe::checkVictory(const gameChar c)
