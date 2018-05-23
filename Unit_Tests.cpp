@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-	myChar c ('X');
+	gameChar c ('X');
 	cout << c << endl;
 	
 	bool b = c=='A';
@@ -58,7 +58,7 @@ int main() {
 	cout << br << endl;
 	cout << board2.size() << endl;
 	
-	myChar myChar;
+	gameChar myChar;
 	myChar = c;
 	cout << myChar << endl;
 }
