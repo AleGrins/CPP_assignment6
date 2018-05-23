@@ -37,4 +37,6 @@ const Coordinate Champion::play(const Board& board)
             }
         }
     }
+    Coordinate myMove {0,0};
+    return myMove;
 }
