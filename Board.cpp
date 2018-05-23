@@ -80,12 +80,12 @@ Board& Board::operator= (char c)
 }
 
 //access board member indicated by 2D coordinate ind
-gameChar& Board::operator[](Coordinate ind) 
+gameChar& Board::operator[](const Coordinate ind) 
 { 
 	if(!inBounds(ind)) throw IllegalCoordinateException(ind);
 	return board[ind.i][ind.j]; 
 }
-gameChar Board::operator[] const(Coordinate ind)
+const gameChar& Board::operator[](const Coordinate ind) const
 {
     if(!inBounds(ind)) throw IllegalCoordinateException(ind);
     return board[ind.i][ind.j];
