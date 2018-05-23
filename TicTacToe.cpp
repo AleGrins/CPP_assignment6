@@ -65,7 +65,7 @@ Player TicTacToe::winner() const
     return *winner;
 }
 
-bool TicTacToe::checkVictory(const myChar c)
+bool TicTacToe::checkVictory(const gameChar c)
 {
     bool victory = true;
     for(int i=0; i<gameBoard.size(); i++){
