@@ -85,6 +85,11 @@ gameChar& Board::operator[](Coordinate ind)
 	if(!inBounds(ind)) throw IllegalCoordinateException(ind);
 	return board[ind.i][ind.j]; 
 }
+gameChar Board::operator[] const(Coordinate ind)
+{
+    if(!inBounds(ind)) throw IllegalCoordinateException(ind);
+    return board[ind.i][ind.j];
+}
 
 int Board::size() const
 {
