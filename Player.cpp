@@ -8,7 +8,7 @@ const Coordinate Player::play(const Board& board) {}
 
 gameChar Player::getChar() const { return myChar; }
 
-void Player::setChar(const gameChar c) 
+void Player::setChar(const gameChar c) const 
 {
     try {
 		myChar = c;  
