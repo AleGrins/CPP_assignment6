@@ -4,7 +4,7 @@
 
 class Champion: public Player {
 private:
-    myChar myChar;
+    gameChar myChar;
     
 public:
     Champion();
