@@ -9,5 +9,5 @@ public:
 	virtual const string name() const;
 	virtual const Coordinate play(const Board& board);
 	gameChar getChar() const;
-	void setChar(const gameChar c);
+	void setChar(const gameChar c) const;
 };
