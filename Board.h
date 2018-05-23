@@ -31,17 +31,17 @@ class IllegalCharException : public std::exception {
 };
 
 //custom char class to accept only specific chars and throw exception otherwise
-class myChar {
+class gameChar {
 	public:
-		myChar();
-		myChar(const char c_);
+		gameChar();
+		gameChar(const char c_);
 		
-		bool operator== (const myChar& other) const;		
+		bool operator== (const gameChar& other) const;		
 		bool operator== (char c_) const;
-		bool operator!= (const myChar& other) const;		
+		bool operator!= (const gameChar& other) const;		
 		bool operator!= (char c_) const;
 		
-		friend ostream& operator<< (ostream& output, const myChar& ch)
+		friend ostream& operator<< (ostream& output, const gameChar& ch)
 		{ 
     		output << ch.c;
     		return output;            
@@ -66,7 +66,7 @@ public:
 	Board& operator= (char c);
 
 	//access board member indicated by 2D coordinate ind
-	myChar& operator[](Coordinate ind);
+	gameChar& operator[](Coordinate ind);
 	
 	int size() const;
 	
@@ -83,7 +83,7 @@ public:
     } 
 	
 private:
-	vector<vector<myChar> >board; 
+	vector<vector<gameChar> >board; 
 	int boardSize;
 	
 	bool inBounds(Coordinate ind); //check that coordinates are not outside the board
