@@ -98,7 +98,7 @@ int Board::size() const
 	
 bool Board::inBounds(Coordinate ind) const //check that coordinates are not outside the board
 {
-	if(ind.i < 0 || ind.j < 0 || ind.i >= boardSize || ind.j >= boardSize) return false;
+	if(int (ind.i) < 0 || int (ind.j) < 0 || int (ind.i) >= boardSize || int (ind.j) >= boardSize) return false;
 	return true;
 }
 
