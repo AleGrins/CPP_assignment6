@@ -37,7 +37,7 @@ class gameChar {
 		gameChar(const char c_);
 	
 		//assignment from other gameChar
-		gameChar& operator= (const gameChar& other);
+		gameChar& operator= (const gameChar& other) const;
 		
 		bool operator== (const gameChar& other) const;		
 		bool operator== (char c_) const;
