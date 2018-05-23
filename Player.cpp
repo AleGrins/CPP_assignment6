@@ -8,10 +8,11 @@ const Coordinate Player::play(const Board& board) {}
 
 gameChar Player::getChar() const { return myChar; }
 
-void Player::setChar(gameChar c) const
+void Player::setChar(char c)
 {
     try {
-		myChar = c;  
+		gameChar tmp (c);
+    		myChar = tmp;  
 	} catch (const IllegalCharException& ex) {
 		cout << "Illegal char: " << ex.theChar() << endl; 
 	}
