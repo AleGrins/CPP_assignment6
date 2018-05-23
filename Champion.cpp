@@ -24,8 +24,8 @@ const Coordinate Champion::play(const Board& board)
     
     //If playing as O, win by filling other diagonal, with first 2 moves filling the corners
     else{
-        if(board[{board.size() - 1,0}] == '.'){ //Take bottom left corner
-            Coordinate myMove {board.size() - 1,0};
+        if(board[{uint (board.size() - 1),0}] == '.'){ //Take bottom left corner
+            Coordinate myMove {uint (board.size() - 1),0};
             return myMove;
         } 
         
