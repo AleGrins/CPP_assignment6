@@ -2,7 +2,7 @@
 
 Champion::Champion() 
 {
-    myChar tmp ('X');
+    gameChar tmp ('X');
     myChar = tmp;
 }
 
