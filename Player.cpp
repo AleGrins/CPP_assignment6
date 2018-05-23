@@ -11,7 +11,8 @@ gameChar Player::getChar() const { return myChar; }
 void Player::setChar(const gameChar c) const 
 {
     try {
-		myChar = c;  
+		gameChar tmp (c.getChar());
+    		myChar = tmp;  
 	} catch (const IllegalCharException& ex) {
 		cout << "Illegal char: " << ex.theChar() << endl; 
 	}
