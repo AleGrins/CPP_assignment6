@@ -8,7 +8,9 @@ using namespace std;
 //display 2D coordinates
 std::ostream& operator<<(std::ostream& os, const Coordinate& ind)
 {
-    return os << ind.i << "," << ind.j;
+    int a = int(ind.i);
+    int b = int(ind.j);
+    return os << a << "," << b;
 }
 
 gameChar::gameChar() { c = '.'; }
