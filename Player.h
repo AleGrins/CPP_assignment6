@@ -4,12 +4,12 @@
 
 class Player {
 private:
-    myChar myChar;
+    gameChar myChar;
 
 public:
 	Player();
 	virtual const string name() const;
 	virtual const Coordinate play(const Board& board);
-	myChar getChar() const;
-	void setChat(const myChar c);
+	gameChar getChar() const;
+	void setChat(const gameChar c);
 };
