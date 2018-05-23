@@ -6,13 +6,6 @@ Champion::Champion()
     myChar = tmp;
 }
 
-char getChar() const { return myChar.c; }
-void setChar(const char c)
-{
-    gameChar tmp (c);
-    myChar = tmp;
-}
-
 const Coordinate Champion::play(const Board& board) 
 {
     //If playing as X, defeat the dummy players by filling main diagonal
