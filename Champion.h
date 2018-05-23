@@ -10,4 +10,6 @@ public:
     Champion();
 	const string name() const override { return "Alex Grinshpun"; }
 	const Coordinate play(const Board& board) override;
+	char getChar() const;
+	void setChar();
 };
