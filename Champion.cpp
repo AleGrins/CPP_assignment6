@@ -14,7 +14,7 @@ const Coordinate Champion::play(const Board& board)
             Coordinate myMove {0,0};
             return myMove;
         } 
-        for(int i=1; i<board.size(); i++){
+        for(uint i=1; i<board.size(); i++){
             if(board[{i,i}] == '.'){
                 Coordinate myMove {i,i};
                 return myMove;
@@ -30,7 +30,7 @@ const Coordinate Champion::play(const Board& board)
         } 
         
         //Fill rest of diagonal starting from top right corner
-        for(int i=0, j=board.size() - 1; j>0; i++, j--){
+        for(uint i=0, j=board.size() - 1; j>0; i++, j--){
             if(board[{i,j}] == '.'){
                 Coordinate myMove {i,j};
                 return myMove;
