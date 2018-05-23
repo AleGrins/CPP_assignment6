@@ -52,6 +52,13 @@ int main() {
 		cout << "Illegal char: " << ex.theChar() << endl;  // "Illegal char: x"
 	}
 	
-	Board br = board2;
+	Board br;
+	br = board2;
+	cout << board2 << endl;
 	cout << br << endl;
+	cout << board2.size() << endl;
+	
+	myChar myChar;
+	myChar = c;
+	cout << myChar << endl;
 }
