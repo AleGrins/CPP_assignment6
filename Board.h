@@ -35,7 +35,9 @@ class gameChar {
 	public:
 		gameChar();
 		gameChar(const char c_);
-		
+	
+		gameChar& operator= (const gameChar& other);
+			
 		bool operator== (const gameChar& other) const;		
 		bool operator== (char c_) const;
 		bool operator!= (const gameChar& other) const;		
