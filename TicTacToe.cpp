@@ -8,7 +8,7 @@ TicTacToe::TicTacToe(int i)
     gameBoard = tmp;
 }
 
-void TicTacToe::play(const Player Px, const Player Po)
+void TicTacToe::play(Player Px, Player Po)
 {
     Px.setChar('X');
     Po.setChar('O');
