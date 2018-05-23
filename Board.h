@@ -7,7 +7,7 @@ using namespace std;
 
 struct Coordinate //used to receive 2D coordinates for the [] overload
 {
-	int i, j;
+	uint i, j;
 };
 
 //coordinates out of bounds, returns given coordinates
